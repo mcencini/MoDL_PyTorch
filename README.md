@@ -37,6 +37,13 @@ The multi-coil brain dataset used in the original paper is publically available.
 
 **Download Link** : https://drive.google.com/file/d/1qp-l9kJbRfQU1W5wCjOQZi7I3T6jwA37/view?usp=sharing
 
+You can download the data running this command (assuming we are in the repository root folder):
+
+```
+mkdir data
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1qp-l9kJbRfQU1W5wCjOQZi7I3T6jwA37' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1qp-l9kJbRfQU1W5wCjOQZi7I3T6jwA37" -O data/dataset.hdf5 && rm -rf /tmp/cookies.txt
+```
+
 ## Configuration file
 
 The configuration files are in `config` folder. Every setting is the same as the paper.
