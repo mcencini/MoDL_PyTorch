@@ -6,6 +6,13 @@ Official code: https://github.com/hkaggarwal/modl
 
 ![alt text](https://github.com/hkaggarwal/modl/blob/master/MoDL_recursive.png)
 
+## Run in Colab
+You can try the script in Google Colab:
+
+<a target="_blank" href="https://colab.research.google.com/github/mcencini/MoDL_PyTorch/blob/master/tryme.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 ## Reference paper
 
 MoDL: Model Based Deep Learning Architecture for Inverse Problems  by H.K. Aggarwal, M.P Mani, and Mathews Jacob in IEEE Transactions on Medical Imaging,  2018 
