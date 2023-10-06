@@ -46,9 +46,9 @@ class myAtA(nn.Module):
         """
         :im: complex image (B x nrow x nrol)
         """
-        im_coil = self.csm * im # split coil images (B x ncoil x nrow x ncol)
+        im_coil = self.csm * im[:, None, ...] # split coil images (B x ncoil x nrow x ncol)
         k_full = torch.fft.fft2(im_coil, norm='ortho') # convert into k-space 
-        k_u = k_full * self.mask # undersampling
+        k_u = k_full * self.mask[:, None, ...] # undersampling
         im_u_coil = torch.fft.ifft2(k_u, norm='ortho') # convert into image domain
         im_u = torch.sum(im_u_coil * self.csm.conj(), axis=1) # coil combine (B x nrow x ncol)
         return im_u + self.lam * im
